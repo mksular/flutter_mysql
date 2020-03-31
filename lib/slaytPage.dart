@@ -158,11 +158,11 @@ class _SlaytPageState extends State<SlaytPage> {
 
   Future _mysqlIslemler(String _islem, int _slaytId) async {
     final conn = await MySqlConnection.connect(ConnectionSettings(
-        host: '93.89.225.127',
+        host: 'localhost',
         port: 3306,
-        user: 'pmksBb556_user01',
-        password: '121212iP+-',
-        db: 'pmksBb556_db0001'));
+        user: 'root',
+        password: '',
+        db: 'mysql_db'));
 
     if (_islem == "kaydet") {
       await conn.query(
